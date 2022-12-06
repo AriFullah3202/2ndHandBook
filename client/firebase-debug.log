@@ -1,0 +1,107 @@
+[debug] [2022-11-28T17:37:20.055Z] ----------------------------------------------------------------------
+[debug] [2022-11-28T17:37:20.059Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2022-11-28T17:37:20.059Z] CLI Version:   11.15.0
+[debug] [2022-11-28T17:37:20.059Z] Platform:      linux
+[debug] [2022-11-28T17:37:20.060Z] Node Version:  v14.21.1
+[debug] [2022-11-28T17:37:20.107Z] Time:          Mon Nov 28 2022 23:37:20 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-11-28T17:37:20.108Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-28T17:37:20.262Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-28T17:37:20.263Z] > authorizing via signed-in user (marifullaah@gmail.com)
+[debug] [2022-11-28T17:37:20.263Z] [iam] checking project books-500dc for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-28T17:37:20.266Z] > refreshing access token with scopes: []
+[debug] [2022-11-28T17:37:20.269Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-11-28T17:37:20.269Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-28T17:37:20.994Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-11-28T17:37:20.995Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-28T17:37:21.204Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/books-500dc:testIamPermissions [none]
+[debug] [2022-11-28T17:37:21.204Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/books-500dc:testIamPermissions x-goog-quota-user=projects/books-500dc
+[debug] [2022-11-28T17:37:21.222Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/books-500dc:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-28T17:37:23.508Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/books-500dc:testIamPermissions 200
+[debug] [2022-11-28T17:37:23.509Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/books-500dc:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-28T17:37:23.512Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/books-500dc [none]
+[debug] [2022-11-28T17:37:24.620Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/books-500dc 200
+[debug] [2022-11-28T17:37:24.621Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/books-500dc {"projectId":"books-500dc","projectNumber":"863766352220","displayName":"Books","name":"projects/books-500dc","resources":{"hostingSite":"books-500dc"},"state":"ACTIVE","etag":"1_84372d6c-8db7-4ded-8133-3d3dac2ed998"}
+[info] 
+[info] === Deploying to 'books-500dc'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-11-28T17:37:24.628Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/books-500dc/versions [none]
+[debug] [2022-11-28T17:37:24.629Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/books-500dc/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-11-28T17:37:27.228Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/books-500dc/versions 200
+[debug] [2022-11-28T17:37:27.229Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/books-500dc/versions {"name":"projects/863766352220/sites/books-500dc/versions/e598bcdc6b9b3153","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[books-500dc]: beginning deploy... 
+[info] i  hosting[books-500dc]: found 15 files in build 
+[debug] [2022-11-28T17:37:27.250Z] [hosting] uploading with 200 concurrency
+[debug] [2022-11-28T17:37:28.002Z] [hosting] hash cache [YnVpbGQ] stored for 15 files
+[debug] [2022-11-28T17:37:28.008Z] [hosting][hash queue][FINAL] {"max":718,"min":47,"avg":105,"active":0,"complete":15,"success":15,"errored":0,"retried":0,"total":15,"elapsed":740}
+[debug] [2022-11-28T17:37:28.009Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/863766352220/sites/books-500dc/versions/e598bcdc6b9b3153:populateFiles [none]
+[debug] [2022-11-28T17:37:28.011Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/863766352220/sites/books-500dc/versions/e598bcdc6b9b3153:populateFiles {"files":{"/asset-manifest.json":"626677feb087f124fca84e8e96cb8c9dc245871372578341dc2f841147711a3c","/index.html":"8f59c75c6324a8bef2eb639f48357bacff7dc27ee9d60bc25c061e2bf72038f2","/logo192.png":"76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd","/logo512.png":"7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205","/static/js/787.c4e7f8f9.chunk.js":"22086e1bcf81b3535b81ce52855db0b19801ff354f2f319fea1c3aa74bb44e5f","/static/js/main.36952dc1.js.LICENSE.txt":"529afc7dbad19400374baf339b0ae4657f9ce8129104c4668fd36f7df5f11a34","/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg":"7d3ee40656c5a13fa0b04821777c1ba40bd028faa5c0e7475f61021d03fd35d6","/favicon.ico":"41ff2051dd9f3d8839eccb7ff0b72d453ecb33ec23f482b6933ea3b1f36e790b","/manifest.json":"0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1","/robots.txt":"2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","/static/js/787.c4e7f8f9.chunk.js.map":"d6f1119d587a1a2f16ef465f2b9eff141adff664b22130a78d72bb1164e327d4","/static/css/main.bc1387c6.css":"358447c0a590ac4714bb4dceca402918fa50d6205734243eb4c93203c03a8644","/static/css/main.bc1387c6.css.map":"efaa49ba3d92b2679006d6b2f5da0f521ff9632caf4855f4e0de4ba73e9b0789","/static/js/main.36952dc1.js":"5763ba51a363cf44160e61a282ed2b5d85780dea5905e0bf74bf21e1e78d9396","/static/js/main.36952dc1.js.map":"da250767f28e255fc78bb6da811dc9b95ed3561a7e483f75bf4e29a12774c27b"}}
+[debug] [2022-11-28T17:37:29.390Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/863766352220/sites/books-500dc/versions/e598bcdc6b9b3153:populateFiles 200
+[debug] [2022-11-28T17:37:29.391Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/863766352220/sites/books-500dc/versions/e598bcdc6b9b3153:populateFiles {"uploadRequiredHashes":["626677feb087f124fca84e8e96cb8c9dc245871372578341dc2f841147711a3c","5763ba51a363cf44160e61a282ed2b5d85780dea5905e0bf74bf21e1e78d9396","8f59c75c6324a8bef2eb639f48357bacff7dc27ee9d60bc25c061e2bf72038f2","da250767f28e255fc78bb6da811dc9b95ed3561a7e483f75bf4e29a12774c27b"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files"}
+[debug] [2022-11-28T17:37:29.394Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/626677feb087f124fca84e8e96cb8c9dc245871372578341dc2f841147711a3c [none]
+[debug] [2022-11-28T17:37:29.394Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/626677feb087f124fca84e8e96cb8c9dc245871372578341dc2f841147711a3c [stream]
+[debug] [2022-11-28T17:37:29.397Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/5763ba51a363cf44160e61a282ed2b5d85780dea5905e0bf74bf21e1e78d9396 [none]
+[debug] [2022-11-28T17:37:29.397Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/5763ba51a363cf44160e61a282ed2b5d85780dea5905e0bf74bf21e1e78d9396 [stream]
+[debug] [2022-11-28T17:37:29.399Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/8f59c75c6324a8bef2eb639f48357bacff7dc27ee9d60bc25c061e2bf72038f2 [none]
+[debug] [2022-11-28T17:37:29.400Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/8f59c75c6324a8bef2eb639f48357bacff7dc27ee9d60bc25c061e2bf72038f2 [stream]
+[debug] [2022-11-28T17:37:29.401Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/da250767f28e255fc78bb6da811dc9b95ed3561a7e483f75bf4e29a12774c27b [none]
+[debug] [2022-11-28T17:37:29.401Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/da250767f28e255fc78bb6da811dc9b95ed3561a7e483f75bf4e29a12774c27b [stream]
+[debug] [2022-11-28T17:37:29.403Z] [hosting][populate queue][FINAL] {"max":1395,"min":1395,"avg":1395,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1404}
+[debug] [2022-11-28T17:37:29.403Z] [hosting] uploads queued: 4
+[debug] [2022-11-28T17:37:32.266Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/626677feb087f124fca84e8e96cb8c9dc245871372578341dc2f841147711a3c 200
+[debug] [2022-11-28T17:37:32.267Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/626677feb087f124fca84e8e96cb8c9dc245871372578341dc2f841147711a3c [stream]
+[debug] [2022-11-28T17:37:32.804Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/8f59c75c6324a8bef2eb639f48357bacff7dc27ee9d60bc25c061e2bf72038f2 200
+[debug] [2022-11-28T17:37:32.804Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/8f59c75c6324a8bef2eb639f48357bacff7dc27ee9d60bc25c061e2bf72038f2 [stream]
+[debug] [2022-11-28T17:37:32.952Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/5763ba51a363cf44160e61a282ed2b5d85780dea5905e0bf74bf21e1e78d9396 200
+[debug] [2022-11-28T17:37:32.952Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/5763ba51a363cf44160e61a282ed2b5d85780dea5905e0bf74bf21e1e78d9396 [stream]
+[debug] [2022-11-28T17:37:40.287Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/da250767f28e255fc78bb6da811dc9b95ed3561a7e483f75bf4e29a12774c27b 200
+[debug] [2022-11-28T17:37:40.287Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/books-500dc/versions/e598bcdc6b9b3153/files/da250767f28e255fc78bb6da811dc9b95ed3561a7e483f75bf4e29a12774c27b [stream]
+[debug] [2022-11-28T17:37:40.289Z] [hosting][upload queue][FINAL] {"max":10894,"min":2875,"avg":5185,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":10897}
+[info] ✔  hosting[books-500dc]: file upload complete 
+[debug] [2022-11-28T17:37:40.293Z] [hosting] deploy completed after 13061ms
+[debug] [2022-11-28T17:37:40.301Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "books-500dc"
+    },
+    "version": "projects/863766352220/sites/books-500dc/versions/e598bcdc6b9b3153"
+  }
+]
+[info] i  hosting[books-500dc]: finalizing version... 
+[debug] [2022-11-28T17:37:40.309Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/books-500dc/versions/e598bcdc6b9b3153 updateMask=status%2Cconfig
+[debug] [2022-11-28T17:37:40.309Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/books-500dc/versions/e598bcdc6b9b3153 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2022-11-28T17:37:41.830Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/books-500dc/versions/e598bcdc6b9b3153 200
+[debug] [2022-11-28T17:37:41.830Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/books-500dc/versions/e598bcdc6b9b3153 {"name":"projects/863766352220/sites/books-500dc/versions/e598bcdc6b9b3153","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-28T17:37:26.141946Z","createUser":{"email":"Marifullaah@gmail.com"},"finalizeTime":"2022-11-28T17:37:41.477696Z","finalizeUser":{"email":"Marifullaah@gmail.com"}}
+[debug] [2022-11-28T17:37:41.831Z] [hosting] finalized version for books-500dc:[object Object]
+[info] ✔  hosting[books-500dc]: version finalized 
+[info] i  hosting[books-500dc]: releasing new version... 
+[debug] [2022-11-28T17:37:41.833Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/books-500dc/channels/live/releases versionName=projects%2F863766352220%2Fsites%2Fbooks-500dc%2Fversions%2Fe598bcdc6b9b3153
+[debug] [2022-11-28T17:37:41.833Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/books-500dc/channels/live/releases {}
+[debug] [2022-11-28T17:37:43.353Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/books-500dc/channels/live/releases 200
+[debug] [2022-11-28T17:37:43.354Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/books-500dc/channels/live/releases {"name":"projects/863766352220/sites/books-500dc/channels/live/releases/1669657062334460","version":{"name":"projects/863766352220/sites/books-500dc/versions/e598bcdc6b9b3153","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-28T17:37:26.141946Z","createUser":{"email":"Marifullaah@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu0gKSbj-vrE-htx83t_56TBALi1t7_JwwWnxFh1gA"},"finalizeTime":"2022-11-28T17:37:41.477696Z","finalizeUser":{"email":"Marifullaah@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu0gKSbj-vrE-htx83t_56TBALi1t7_JwwWnxFh1gA"}},"type":"DEPLOY","releaseTime":"2022-11-28T17:37:42.334460353Z","releaseUser":{"email":"Marifullaah@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu0gKSbj-vrE-htx83t_56TBALi1t7_JwwWnxFh1gA"}}
+[debug] [2022-11-28T17:37:43.354Z] [hosting] release: {"name":"projects/863766352220/sites/books-500dc/channels/live/releases/1669657062334460","version":{"name":"projects/863766352220/sites/books-500dc/versions/e598bcdc6b9b3153","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-28T17:37:26.141946Z","createUser":{"email":"Marifullaah@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu0gKSbj-vrE-htx83t_56TBALi1t7_JwwWnxFh1gA"},"finalizeTime":"2022-11-28T17:37:41.477696Z","finalizeUser":{"email":"Marifullaah@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu0gKSbj-vrE-htx83t_56TBALi1t7_JwwWnxFh1gA"}},"type":"DEPLOY","releaseTime":"2022-11-28T17:37:42.334460353Z","releaseUser":{"email":"Marifullaah@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu0gKSbj-vrE-htx83t_56TBALi1t7_JwwWnxFh1gA"}}
+[info] ✔  hosting[books-500dc]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/books-500dc/overview
+[info] Hosting URL: https://books-500dc.web.app
+[debug] [2022-11-28T17:37:53.358Z] Error: Timed out.
+    at Timeout.<anonymous> (/usr/lib/node_modules/firebase-tools/lib/utils.js:253:49)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+[error] 
+[error] Error: An unexpected error has occurred.
