@@ -50,6 +50,7 @@ const Signup = () => {
             updateUserProfile(name, data.data.url)
               .then(res => {
                 toast.success('Registration Successful.....!')
+                navigate(from, { replace: true })
               })
               .catch(err => { console.log(err) })
 
@@ -79,6 +80,7 @@ const Signup = () => {
       if (result.user) {
         setAuthToken(user)
         toast.success('Registration Successful.....!')
+        navigate(from, { replace: true })
       }
     })
       .catch(err => {
